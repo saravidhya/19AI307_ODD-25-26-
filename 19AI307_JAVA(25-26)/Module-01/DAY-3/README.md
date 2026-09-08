@@ -1,48 +1,56 @@
-# Ex.No:1(C) LOOPING STATEMENT
+# Ex.No:1(D) ARRAYS
 
 ## QUESTION:
-Display Factors of a Number
+Write a Java program to sort an array in ascending order.
+| Input | Result |
+|-------|--------|
+| 5<br>5<br>3<br>8<br>6<br>2 | 2 3 5 6 8 |
 
 
 ## AIM:
-To write a Java program that reads an integer from the user and displays all the factors of the given number.
+To write a Java program that reads an array of integers and sorts the elements in ascending order using built-in array methods.
 
 ## ALGORITHM :
-1.Start the program and read an integer n from the user.
+1.	Start the program.
+2.	Import the necessary package 'java.util'
+3.	Read the size of the array from the user.
+4.	Declare an integer array with the given size.
+5.	Read each array element using a loop.
+6.	Use Arrays.sort() to sort the array in ascending order.
+7.	Print the sorted array elements.
+8.	End the program.
 
-2.Loop from 1 to n and check if each number i divides n exactly (i.e., n % i == 0).
 
-3.If yes, print i as a factor.
-
-4.Continue the loop until all factors are printed.
-
-5.End the program.
 
 
 
 ## PROGRAM:
  ```
 /*
-Program to implement a Looping Statement using Java
+Program to implement a Array concept using Java
 Developed by: Vidhiya Lakshmi S
-RegisterNumber: 212223230238
+RegisterNumber:  212223230238
 */
 ```
 
 ## SOURCE CODE:
 ```
-import java.util.Scanner;
-
-public class Factors {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-
-        System.out.print("Factors: ");
-        for (int i = 1; i <= n; i++) {
-            if (n % i == 0) { 
-                System.out.print(i + " ");
-            }
+import java.util.*;
+class prog{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int a[]=new int[n];
+        for (int i=0;i<n;i++)
+        {
+            int x=sc.nextInt();
+            a[i]=x;
+        }
+        Arrays.sort(a);
+        for (int i=0;i<n;i++)
+        {
+            System.out.print(a[i]+ " ");
         }
     }
 }
@@ -50,12 +58,14 @@ public class Factors {
 
 
 
+
+
+
 ## OUTPUT:
-<img width="783" height="324" alt="image" src="https://github.com/user-attachments/assets/aec35b44-acab-4431-893b-df99fc8c8cd4" />
+
+<img width="500" height="694" alt="image" src="https://github.com/user-attachments/assets/ff86bb32-fc40-4c22-9e7f-5a6f77bb0477" />
+
 
 
 ## RESULT:
-Therefore, the program successfully reads a number from the user and computes its factors.
-
-
-
+Thus, the Java program to sort an array in ascending order was executed successfully.
