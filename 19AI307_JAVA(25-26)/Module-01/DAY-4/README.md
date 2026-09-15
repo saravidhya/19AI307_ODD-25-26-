@@ -1,111 +1,73 @@
-# Ex.No:4(D) DESIGN PATTERN -- ABSTRACT FACTORY
+# Ex.No:1(D) ARRAYS
 
 ## QUESTION:
-You are asked to simulate a simple Shape Drawing Tool using the Factory Design Pattern in Java.
-
-You will implement a Shape interface with concrete classes for different shapes (Circle, Square, Rectangle). Using a ShapeFactory, your program will take shape names from user input and draw them accordingly. If the shape is unknown, print an error message.
-
-
+Write a Java program to find the index of a given element in an array.
 
 ## AIM:
-To write a Java program that implements the Factory Design Pattern to create and draw shapes dynamically based on user input.
+To write a Java program that finds the index position of a specified element from a given array.
 
 ## ALGORITHM :
 1.	Start the program.
 2.	Import the necessary package 'java.util'
-3.	Create a Shape interface containing a draw() method.
-4. Create concrete classes Circle, Square, and Rectangle implementing Shape.
-5. Create a ShapeFactory class with a method getShape(String shapeType).
-6. In the main() method, accept user input for shape type.
-7. Call factory method to get the appropriate object.
-8. Draw the shape or print error if unknown.
-9. Stop the program.
-
+3.	Read the size of the array from the user.
+4. Create an array of the given size.
+5. Read the array elements from the user and store them in the array.
+6. Read the element to be searched.
+7. Traverse the array and compare each element with the search element.
+8. If matched, print the index position and terminate.
+9. If not found, display "Element not found".
+10. Stop the program.
 
 ## PROGRAM:
  ```
 /*
-Program to implement a Abstract Factory Pattern using Java
+Program to implement a Array concept using Java
 Developed by: VIDHIYA LAKSHMI S
-RegisterNumber:212223230238
+RegisterNumber: 212223230238
 */
 ```
 
 ## SOURCE CODE:
 ```
-import java.util.Scanner;
-
-interface Shape {
-    void draw();
-}
-
-class Circle implements Shape {
-    public void draw() {
-        System.out.println("Drawing Circle");
-    }
-}
-
-class Square implements Shape {
-    public void draw() {
-        System.out.println("Drawing Square");
-    }
-}
-
-class Rectangle implements Shape {
-    public void draw() {
-        System.out.println("Drawing Rectangle");
-    }
-}
-
-class ShapeFactory {
-    public Shape getShape(String shapeType) {
-        if (shapeType == null) {
-            return null;
+import java.util.*;
+public class Main
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int[] arr=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            arr[i]=sc.nextInt();
         }
-        switch (shapeType.toLowerCase()) {
-            case "circle":
-                return new Circle();
-            case "square":
-                return new Square();
-            case "rectangle":
-                return new Rectangle();
-            default:
-                return null;
-        }
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        ShapeFactory factory = new ShapeFactory();
-        
-        while (true) {
-            String input = sc.nextLine().trim();
-            if (input.equalsIgnoreCase("exit")) {
+        int key=sc.nextInt();
+        int index=-1;
+        for(int i=0;i<n;i++)
+        {
+            if(arr[i]==key)
+            {
+                index=i;
                 break;
             }
-            
-            Shape shape = factory.getShape(input);
-            if (shape != null) {
-                shape.draw();
-            } else {
-                System.out.println("Invalid shape: " + input);
-            }
         }
-        sc.close();
+        
+        if(index!=-1)
+        {
+            
+            System.out.println(index);
+        }
+        else{
+            System.out.println("Element not found");
+        }
     }
 }
 ```
 
 
-
-
-
-
 ## OUTPUT:
-
-![java44](https://github.com/ABINAYA-27-76/19AI307_ODD-25-26-/blob/b628a27d8352a971924fad5b0adffc7f5f8644ba/19AI307_JAVA(25-26)/Module-04/DAY-4/java44.png)
+![OUTPUT](https://github.com/ABINAYA-27-76/19AI307_ODD-25-26-/blob/89cca4a56df2cfb4774052b6ca0e2fe103f4875f/19AI307_JAVA(25-26)/Module-01/DAY-4/output.jpg)
 
 ## RESULT:
-Thus, the Java program to simulate Shape Drawing using the Factory Design Pattern was successfully implemented and executed.
+
+Thus, the Java program to find the index of a given element in an array was successfully executed.
