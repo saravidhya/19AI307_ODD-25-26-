@@ -1,54 +1,53 @@
-# Ex.No:1(E) STRINGS AND MATH FUNCTION
+# Ex.No:1(C) LOOPING STATEMENT
 
 ## QUESTION:
-Write a Java program to reverse a given string.
-
-For example:
-
-| Input | Result |
-|------|--------|
-| welcome | Reversed string: emoclew |
-
----
-
+Construct a right-angled triangle star pattern using for loop.
 ## AIM:
-To write a Java program that reads a string from the user and prints the reversed string using the StringBuilder reverse() method.
-
----
+To write a Java program using looping statements to print a right-angled triangle star pattern based on user input.
 
 ## ALGORITHM :
 1.	Start the program.
+
 2.	Import the necessary package 'java.util'
-3.	Create a Scanner object to read input from the user.
-4.	Read the input string using next().
-5.	Create a StringBuilder object and pass the input string to it.
-6.	Use the reverse() method of StringBuilder to reverse the string.
-7.	Print the reversed string.
-8.	End the program.
 
+3. Read the number of rows from the user.
 
+4. Use an outer loop to iterate through each row.
+
+5. Use an inner loop to print stars (*) for each row.
+
+6. Move to the next line after printing stars for each row.
+
+7. End the program.
 
 
 ## PROGRAM:
  ```
 /*
-Program to implement a Strings and Math Function using Java
-Developed by: Vidhiya Lakshmi S
-RegisterNumber:  212223230238
+Program to implement a Looping Statement using Java
+Developed by: VIDHIYA LAKSHMI S
+RegisterNumber: 212223230238
 */
 ```
 
 ## SOURCE CODE:
-```java
-import java.util.*;
 
-class prog{
-    public static void main(String[] args)
+```
+import java.util.*;
+public class TrianglePattern
+{
+    public static void main(String args[])
     {
-        Scanner sc = new Scanner(System.in);
-        String a = sc.next();
-        StringBuilder sb = new StringBuilder(a);
-        System.out.println("Reversed string: " + sb.reverse());
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        for (int i = 1; i <= n; i++) 
+        {         
+            for (int j = 1; j <= i; j++) 
+            {      
+                System.out.print("* ");
+            }
+            System.out.println();              
+        }
     }
 }
 ```
@@ -56,12 +55,10 @@ class prog{
 
 
 
-
-
 ## OUTPUT:
-<img width="692" height="297" alt="image" src="https://github.com/user-attachments/assets/b5cfd461-e3d6-4f08-9a1a-d12e458f4bb7" />
+<img width="399" height="395" alt="image" src="https://github.com/user-attachments/assets/07286d0c-5174-4702-8d58-34b630bd23d6" />
 
 
 
 ## RESULT:
-Thus, the Java program to reverse a given string was executed successfully.
+Thus, the Java program using looping statements to print a right-angled triangle star pattern was successfully written, executed, and verified.
